@@ -1,0 +1,4 @@
+venv/
+decoy.py
+*.pyc
+__pycache__/
