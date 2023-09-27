@@ -11,6 +11,7 @@ class Region(BaseModel):
         allowed_values=["KR-1" ,"KR-2", "KR-GOV-1"]
         if v not in allowed_values:
             raise ValueError(f"Region must be one of {', '.join(allowed_values)}.")
+        return v
 
 
 class AuthModel(BaseModel):
