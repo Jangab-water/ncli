@@ -4,7 +4,7 @@ import os
 
 
 class BaseModule:
-    def __init__(self, name: str, log_level: str, expose_dnager: bool=False):
+    def __init__(self, name: str, log_level: str):
         self.name=name
         self.logger=self.__build_logger(self.name, level=log_level)
         

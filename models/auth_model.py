@@ -12,6 +12,17 @@ class Region(BaseModel):
         if v not in allowed_values:
             raise ValueError(f"Region must be one of {', '.join(allowed_values)}.")
         return v
+    
+@dataclass
+class Method(BaseModel):
+    method: str
+    
+    @validator("method")
+    def validate_method(cls, v):
+        allowed_values=["GET", "POST", "PUT", "DELETE"]
+        if v not in allowed_values:
+            raise ValueError(f"Method must be one of {', '.join(allowed_values)}.")
+        return v
 
 
 class AuthModel(BaseModel):
@@ -22,3 +33,9 @@ class AuthModel(BaseModel):
     @field_serializer("access_key", "secret_key", when_used="json")
     def reveal_secret(self, sensitive_value):
         return sensitive_value.get_secret_value()
+    
+
+class ResourceModel(BaseModel):
+    timestamp: float
+    method: Method
+    uri: str
