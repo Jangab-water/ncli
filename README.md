@@ -4,11 +4,15 @@
 
 Cloud Function에서 구동 가능한 경량 모니터링 소프트웨어 제작. 지속적인 훅을 날리는게 아닌, 매일의 결과를 정리해 리포팅하는 정도면 충분함.
 
-## 기능상세
-
-1. Ncloud API
+Meta Data Creating
 
 - [인증 헤더 생성](https://api.ncloud-docs.com/docs/common-ncpapi)
+
+## 기능상세
+
+1. PriceListing
+
+- [비용 조회](https://api.ncloud-docs.com/docs/platform-costandusage-getdemandcostlist)
 
 2. Object Storage
 
@@ -40,7 +44,7 @@ Cloud Function에서 구동 가능한 경량 모니터링 소프트웨어 제작
 
 - [클라우드 인프라 변경사항 조회](https://api.ncloud-docs.com/docs/management-cloudactivitytracer-getactivitylist)
 
-7. Cloud Acvisor
+7. Cloud Advisor
 
 - [클라우드 설정 권장사항 조회](https://api.ncloud-docs.com/docs/management-cloud-advisor-refresh) - 추가 확인 필요
 

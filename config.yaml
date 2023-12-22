@@ -1,0 +1,14 @@
+auth:
+  stdin: true
+  # credentials:
+  # - accessKey:
+  #   secretKey:
+
+services:
+  price: true
+  objectStorage: true
+  certificateManager: true
+  securityMonitoring: true
+  monitoring: true
+  cloudActivityTracer: true
+  cloudAcvisor: true
